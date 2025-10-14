@@ -1,0 +1,38 @@
+
+<div class="container">
+    
+    <app-navbar [showButtonAtTop]="showButtonAtTop"></app-navbar>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img class="logo" src="/assets/images/logo3.png" />
+            <h3>Stay organized. Track your tasks. Get things done.</h3>
+            <button id="hero-button" mat-raised-button (click)="scrollToDetails()">Find out more</button>
+        </div>
+
+    </section>
+
+    <section #details class="details">
+        <div class="details-description">
+            <h2>About Listelle</h2>
+            <p>Manage your work and personal life, one task at a time. Create to-dos, mark them complete and stay on top of your daily goals effortlessly!</p>
+        </div>
+        <div class="details-buttons" *ngIf="!showButtonAtTop">
+            <button id="details-signin" mat-raised-button color="primary" routerLink="/login">Sign In</button>
+            <button id="details-register" mat-stroked-button color="primary" routerLink="/register">Register</button>
+        </div>
+
+        <button
+            mat-fab
+            color="primary"
+            class="scroll-top-button"
+            *ngIf="showScrollTopButton"
+            (click)="scrollToTop()">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+    </section>
+
+</div>
+
+
+

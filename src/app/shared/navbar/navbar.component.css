@@ -1,0 +1,18 @@
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  color: #000;
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+}
+
+button {
+  font-size: 17px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
