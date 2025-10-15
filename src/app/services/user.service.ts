@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
-import { IUser, IUserCredentials } from './user.model';
 import { HttpClient } from '@angular/common/http';
+import { IUser, IUserCredentials } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,6 @@ export class UserService {
 
   register(user: IUser): Observable<IUser> {
     return this.http
-    .post<IUser>('/api/register', user);
+      .post<IUser>('/api/register', user);
   }
 }

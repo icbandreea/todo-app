@@ -41,7 +41,7 @@
 
 
 .register {
-  font-size: 25px;
+  font-size: 23px;
   align-self: center;
   color: #555;
   margin-bottom: 10px;
@@ -76,7 +76,7 @@ em.error {
   background-color: #F5D72A;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: white;
-  padding: 7px 14px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -88,8 +88,12 @@ em.error {
 }
 
 .signin:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
+    cursor: not-allowed;
+    background-color: #ccc;        
+    color: #666;                   
+    cursor: not-allowed;           
+    transform: none;                
+    box-shadow: none;               
 }
 
 /* Already have an account link */
@@ -140,7 +144,7 @@ em.error {
 .accountMessage {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 7px;
     justify-content: center;
     color: #444;
     margin-top: 10px;
@@ -150,3 +154,4 @@ em.error {
     text-decoration: none;
     color: rgb(8, 117, 225);
 }
+

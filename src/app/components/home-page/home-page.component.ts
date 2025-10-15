@@ -10,12 +10,12 @@ export class HomePageComponent {
   showButtonAtTop = true;
   showScrollTopButton = false;
 
-  scrollToDetails() {
+  scrollToDetails(): void {
     this.detailsSection.nativeElement.scrollIntoView({behavior: 'smooth'});
   }
 
   @HostListener('window:scroll')
-  onScroll() {
+  onScroll(): void {
     const scrollY = window.scrollY;
 
     this.showButtonAtTop = scrollY < 100;
@@ -23,7 +23,7 @@ export class HomePageComponent {
     this.showScrollTopButton = scrollY > 300;
   }
 
-  scrollToTop() {
+  scrollToTop(): void {
     window.scrollTo({top:0, behavior: 'smooth'});
   }
 }

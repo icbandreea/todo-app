@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IUser } from 'src/app/user.model';
+import { IUser } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +24,7 @@ export class RegisterComponent {
 
   ) {}
 
-  register() {
+  register(): void {
     this.registerError = false;
 
     if (this.credentials.password !== this.credentials.confirmPassword) {

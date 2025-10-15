@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IUserCredentials } from 'src/app/user.model';
-import { UserService } from 'src/app/user.service';
+import { IUserCredentials } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +18,7 @@ export class LoginComponent {
 
   ) {}
 
-  signIn() {
+  signIn(): void {
     this.signInError = false;
     this.userService.signIn(this.credentials).subscribe({
       next: () => this.router.navigate(['/dashboard']),

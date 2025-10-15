@@ -1,12 +1,10 @@
 .container{
     display: flex;
     background-image: url('/assets/images/portfolio-8.jpg');
-    background-size: contain;
+    background-size: cover;
     flex-direction: column;
     background-repeat: no-repeat; 
-    
-    
-
+    background-attachment: fixed;
 }
 
 
@@ -83,6 +81,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 
