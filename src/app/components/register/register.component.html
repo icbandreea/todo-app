@@ -10,7 +10,9 @@
         placeholder="First Name"
         type="text"
         />
-        <em class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">First Name is required</em>
+        @if(firstName.errors?.['required'] && firstName.touched) {
+            <em class="error">First Name is required</em>
+        }
 
         <input
         name="lastName"
@@ -20,7 +22,9 @@
         placeholder="Last Name"
         type="text"
         />
-        <em class="error" *ngIf="lastName.errors?.['required'] && lastName.touched">Last Name is required</em>
+        @if(lastName.errors?.['required'] && lastName.touched) {
+            <em class="error">Last Name is required</em>
+        }
 
         <input
         name="email"
@@ -31,8 +35,12 @@
         placeholder="Email Address"
         type="text"
         /> 
-        <em class="error" *ngIf="email.errors?.['required'] && email.touched">Email is required</em>
-        <em class="error" *ngIf="email.errors?.['email'] && email.touched">Must be a valid email format</em>
+        @if(email.errors?.['required'] && email.touched) {
+            <em class="error">Email is required</em>
+        }
+        @if(email.errors?.['email'] && email.touched) {
+            <em class="error">Must be a valid email format</em>
+        }
 
         <input
         name="password"
@@ -43,17 +51,21 @@
         placeholder="Password"
         type="password"
         />
-        <em class="error" *ngIf="password.errors?.['required'] && password.touched">Password is required</em>
-        <em class="error" *ngIf="password.errors?.['strongPassword'] && password.touched">
-            <p>Password must include:</p>
-                <ul>
-                    <li>At least 8 characters</li>
-                    <li>An uppercase letter</li>
-                    <li>A lowercase letter</li>
-                    <li>A number</li>
-                    <li>A special character</li>
-                </ul>
-        </em>
+        @if(password.errors?.['required'] && password.touched) {
+            <em class="error">Password is required</em>
+        }
+        @if(password.errors?.['strongPassword'] && password.touched) {
+            <em class="error">
+                <p>Password must include:</p>
+                    <ul>
+                        <li>At least 8 characters</li>
+                        <li>An uppercase letter</li>
+                        <li>A lowercase letter</li>
+                        <li>A number</li>
+                        <li>A special character</li>
+                    </ul>
+            </em>
+        }
 
         <input
             name="confirmPassword"
@@ -63,25 +75,29 @@
             placeholder="Confirm Password"
             type="password"
             />
-            <em class="error" *ngIf="confirmPassword.touched && confirmPassword.value !== credentials.password">
-            Passwords do not match!
-            </em>
-
+            @if(confirmPassword.touched && confirmPassword.value !== credentials.password) {
+                <em class="error">
+                    Passwords do not match!
+                </em>
+            }
+            
         <div class="buttons">
         <button type="submit" [disabled]="signInForm.invalid || credentials.password !== credentials.confirmPassword" class="signin">
             Register
         </button>
         </div>
-        <div class="existingAccount" *ngIf="registerError">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="wd-icon-exclamation-circle wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24">
-                <g fill-rule="evenodd" class="wd-icon-container">
-                <circle cx="12" cy="12" r="9" class="wd-icon-background"></circle>
-                <path d="M12 2c5.523 0 10 4.476 10 10 0 5.523-4.476 10-10 10-5.523 0-10-4.476-10-10C2 6.477 6.476 2 12 2zm0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8z" class="wd-icon-fill"></path>
-                <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
-                </g>
-            </svg>
-             An account with this email address already exists. Try again with another email address or Sign In!
-        </div>
+        @if(registerError) {
+            <div class="existingAccount">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="wd-icon-exclamation-circle wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24">
+                    <g fill-rule="evenodd" class="wd-icon-container">
+                    <circle cx="12" cy="12" r="9" class="wd-icon-background"></circle>
+                    <path d="M12 2c5.523 0 10 4.476 10 10 0 5.523-4.476 10-10 10-5.523 0-10-4.476-10-10C2 6.477 6.476 2 12 2zm0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8z" class="wd-icon-fill"></path>
+                    <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
+                    </g>
+                </svg>
+                An account with this email address already exists. Try again with another email address or Sign In!
+            </div>
+        }
         <div class="accountMessage">
             Already have an account? <br><a routerLink="/login" routerLinkActive="active">Sign In</a>
         </div>
