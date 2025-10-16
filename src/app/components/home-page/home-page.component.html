@@ -6,7 +6,7 @@
     <section class="hero">
         <div class="hero-content">
             <img class="logo" src="/assets/images/logo3.png" />
-            <h3>Stay organized. Track your tasks. Get things done.</h3>
+            <h3>{{homePageText.HeroText}}</h3>
             <button id="hero-button" mat-raised-button (click)="scrollToDetails()">Find out more</button>
         </div>
 
@@ -14,8 +14,8 @@
 
     <section #details class="details">
         <div class="details-description">
-            <h2>About Listelle</h2>
-            <p>Manage your work and personal life, one task at a time. Create to-dos, mark them complete and stay on top of your daily goals effortlessly!</p>
+            <h2>{{homePageText.DescriptionHeader}}</h2>
+            <p>{{homePageText.DescriptionText}}</p>
         </div>
         @if(!showButtonAtTop) {
             <div class="details-buttons">

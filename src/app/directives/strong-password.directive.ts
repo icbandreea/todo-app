@@ -19,16 +19,18 @@ export class StrongPasswordDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
     if(!value) return null;
+    
+    const errors: any = {};
 
-    const hasUpper = /[A-Z]/.test(value);
-    const hasLower = /[a-z]/.test(value);
-    const hasNumber = /\d/.test(value);
-    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(value);
-    const hasMinLength = value.length >=8;
+     errors.uppercase = /[A-Z]/.test(value) ? null : 'An uppecase letter';
+     errors.lowercase = /[a-z]/.test(value) ? null : 'A lowercase letter';
+     errors.number = /\d/.test(value) ? null : 'A number' ;
+     errors.specialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value) ? null : 'A special character' ;
+     errors.minLength = value.length >=8 ? null : 'At least 8 characters';
 
-    const isValid = hasUpper && hasLower && hasNumber && hasSpecial && hasMinLength;
+    const failedRules = Object.values(errors).filter(Boolean);
 
-    return isValid ? null : {strongPassword : true};
+    return failedRules.length ? {strongPassword : failedRules} : null;
   }
 
 }

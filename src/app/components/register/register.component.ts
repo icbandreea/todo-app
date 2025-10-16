@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IUser } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { PasswordRules, RegisterText } from 'src/app/enums/text.enum';
 
 @Component({
   selector: 'app-register',
@@ -17,6 +18,8 @@ export class RegisterComponent {
     confirmPassword: ''
   };
   registerError: boolean = false;
+  registerText = RegisterText;
+  passwordRulesTitle = PasswordRules.Title;
 
   constructor(
     private router: Router,

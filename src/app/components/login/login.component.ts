@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginText } from 'src/app/enums/text.enum';
 import { IUserCredentials } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,6 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent {
   credentials: IUserCredentials = {email: '', password: '' };
   signInError: boolean = false;
+  loginText = LoginText;
 
   constructor(
     private router: Router,

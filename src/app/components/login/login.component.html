@@ -11,7 +11,7 @@
                     <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
                     </g>
                 </svg>
-                You may have entered the wrong email address or password. Please try again!
+                {{loginText.WrongAccount}}
             </div>
         }
         <input
@@ -25,10 +25,10 @@
         />
 
         @if(email.errors?.['required'] && email.touched) {
-            <em class="error">Email is required</em>
+            <em class="error">{{loginText.RequiredEmailError}}</em>
         }
         @if(email.errors?.['email'] && email.touched) {
-            <em class="error">Must be a valid email format</em>
+            <em class="error">{{loginText.InvalidEmailError}}</em>
         } 
 
         <input
@@ -40,7 +40,7 @@
         type="password"
         />
         @if(password.invalid && password.touched) {
-            <em class="error">Password is required</em>
+            <em class="error">{{loginText.RequiredPasswordError}}</em>
         }
         <div class="buttons">
         <button type="submit" [disabled]="signInForm.invalid" class="signin">
@@ -48,7 +48,7 @@
         </button>
         </div>
         <div class="register">
-            Don't have an account yet? <br><a routerLink="/register" routerLinkActive="active">Create Account</a>
+            {{loginText.RegisterMessage}} <br><a routerLink="/register" routerLinkActive="active">Create Account</a>
         </div>
     </form>
 

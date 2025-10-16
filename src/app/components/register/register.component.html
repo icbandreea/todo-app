@@ -11,7 +11,7 @@
         type="text"
         />
         @if(firstName.errors?.['required'] && firstName.touched) {
-            <em class="error">First Name is required</em>
+            <em class="error">{{registerText.FirstNameError}}</em>
         }
 
         <input
@@ -23,7 +23,7 @@
         type="text"
         />
         @if(lastName.errors?.['required'] && lastName.touched) {
-            <em class="error">Last Name is required</em>
+            <em class="error">{{registerText.LastNameError}}</em>
         }
 
         <input
@@ -36,10 +36,10 @@
         type="text"
         /> 
         @if(email.errors?.['required'] && email.touched) {
-            <em class="error">Email is required</em>
+            <em class="error">{{registerText.EmailError}}</em>
         }
         @if(email.errors?.['email'] && email.touched) {
-            <em class="error">Must be a valid email format</em>
+            <em class="error">{{registerText.InvalidEmailError}}</em>
         }
 
         <input
@@ -48,22 +48,23 @@
         #password="ngModel"
         [(ngModel)]="credentials.password"
         appStrongPassword
+        (blur)="password.control.updateValueAndValidity()"
         placeholder="Password"
         type="password"
         />
         @if(password.errors?.['required'] && password.touched) {
-            <em class="error">Password is required</em>
+            <em class="error">{{registerText.PasswordError}}</em>
         }
         @if(password.errors?.['strongPassword'] && password.touched) {
             <em class="error">
-                <p>Password must include:</p>
-                    <ul>
-                        <li>At least 8 characters</li>
-                        <li>An uppercase letter</li>
-                        <li>A lowercase letter</li>
-                        <li>A number</li>
-                        <li>A special character</li>
-                    </ul>
+                <p>{{passwordRulesTitle}}</p> 
+                    @if(password.errors?.['strongPassword']?.length) {
+                        <ul>
+                            @for(rule of password.errors?.['strongPassword']; track rule) {
+                                <li>{{rule}}</li>
+                            }
+                        </ul>
+                    }
             </em>
         }
 
@@ -77,7 +78,7 @@
             />
             @if(confirmPassword.touched && confirmPassword.value !== credentials.password) {
                 <em class="error">
-                    Passwords do not match!
+                    {{registerText.PasswordsNotMatchingError}}
                 </em>
             }
             
@@ -95,7 +96,7 @@
                     <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
                     </g>
                 </svg>
-                An account with this email address already exists. Try again with another email address or Sign In!
+                {{registerText.ExistingAccountError}}
             </div>
         }
         <div class="accountMessage">
