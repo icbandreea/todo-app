@@ -1,11 +1,26 @@
 
 .toolbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; 
+  align-items: center;            
   background-color: transparent;
-  backdrop-filter: blur(10px);
   box-shadow: none;
+  padding: 0 1rem;
+  height: 64px; 
 }
+
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
 
 button {
   font-size: 17px;
@@ -16,3 +31,48 @@ button + button {
   margin-left: 10px;
 }
 
+
+.language-selector select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+  width: 120px;
+  max-width: 100%;
+
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23999' height='10' viewBox='0 0 10 10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 10,0 5,5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.6rem;
+  padding-right: 2rem;
+}
+
+.language-selector option {
+  width: auto;
+}
+
+
+.language-selector select:hover,
+.language-selector select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #444; 
+  margin-right: 15px;
+}

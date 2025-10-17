@@ -1,7 +1,9 @@
+<div class="loginpage">
+<app-navbar></app-navbar>
 <div class="container">
     <form #signInForm="ngForm" class="form" (ngSubmit)="signIn()">
         <img class="logo" src="/assets/images/logo3.png" routerLink="/home" routerLinkActive="active"/>
-        <div class="sign-in">Sign In</div>
+        <div class="sign-in">{{'LOGIN.HEADER' | translate}}</div>
         @if(signInError) {
             <div class="signInError">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="wd-icon-exclamation-circle wd-icon" focusable="false" role="presentation" viewBox="0 0 24 24">
@@ -11,7 +13,7 @@
                     <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
                     </g>
                 </svg>
-                {{loginText.WrongAccount}}
+                {{'LOGIN.WRONG_ACCOUNT' | translate}}
             </div>
         }
         <input
@@ -20,15 +22,15 @@
         email
         #email = "ngModel"
         [(ngModel)] = "credentials.email"
-        placeholder="Email Address"
+        [placeholder]="'PLACEHOLDER.EMAIL' | translate"
         type="text"
         />
 
         @if(email.errors?.['required'] && email.touched) {
-            <em class="error">{{loginText.RequiredEmailError}}</em>
+            <em class="error">{{'ERRORS.REQUIRED_EMAIL' | translate}}</em>
         }
         @if(email.errors?.['email'] && email.touched) {
-            <em class="error">{{loginText.InvalidEmailError}}</em>
+            <em class="error">{{'ERRORS.INVALID_EMAIL' | translate}}</em>
         } 
 
         <input
@@ -36,20 +38,22 @@
         required
         #password = "ngModel"
         [(ngModel)] = "credentials.password"
-        placeholder="Password"
+        [placeholder]="'PLACEHOLDER.PASSWORD' | translate"
         type="password"
         />
         @if(password.invalid && password.touched) {
-            <em class="error">{{loginText.RequiredPasswordError}}</em>
+            <em class="error">{{'ERRORS.REQUIRED_PASSWORD' | translate}}</em>
         }
         <div class="buttons">
         <button type="submit" [disabled]="signInForm.invalid" class="signin">
-            Sign In
+            {{'BUTTONS.SIGNIN' | translate}}
         </button>
         </div>
         <div class="register">
-            {{loginText.RegisterMessage}} <br><a routerLink="/register" routerLinkActive="active">Create Account</a>
+            {{'LOGIN.REGISTER_MESSAGE' | translate}} <br><a routerLink="/register" routerLinkActive="active">{{'BUTTONS.CREATE_ACCOUNT' | translate}}</a>
         </div>
     </form>
 
 </div>
+</div>
+

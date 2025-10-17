@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "整理整頓しましょう。タスクを追跡し、目標を達成しましょう。",
+    "DESCRIPTION_HEADER": "Listelleについて",
+    "DESCRIPTION_TEXT": "仕事と私生活を一度に一つずつ管理しましょう。To-Doを作成し、完了済みにして、日々の目標を簡単に達成しましょう。"
+  },
+
+  "LOGIN": {
+    "HEADER": "サインイン",
+    "WRONG_ACCOUNT": "メールアドレスまたはパスワードが間違っている可能性があります。もう一度お試しください！",
+    "REGISTER_MESSAGE": "まだアカウントをお持ちでないですか？"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "アカウントを作成",
+    "SIGNIN_TEXT": "すでにアカウントをお持ちですか？"
+  },
+
+  "NAVBAR": {
+    "GREETING": "こんにちは"
+  },
+
+  "PASSWORD": {
+    "TITLE": "パスワードには以下を含める必要があります：",
+    "MIN_LENGTH": "8文字以上",
+    "UPPERCASE": "大文字1文字",
+    "LOWERCASE": "小文字1文字",
+    "NUMBER": "数字1文字",
+    "SPECIAL_CHAR": "特殊文字1文字"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "サインイン",
+    "REGISTER": "登録",
+    "CREATE_ACCOUNT": "アカウント作成",
+    "LEARN_MORE": "詳細はこちら"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "メールアドレスは必須です",
+    "INVALID_EMAIL": "有効なメール形式で入力してください",
+    "REQUIRED_PASSWORD": "パスワードは必須です",
+    "FIRST_NAME": "名は必須です",
+    "LAST_NAME": "姓は必須です",
+    "PASSWORD_NOT_MATCHING": "パスワードが一致しません！",
+    "EXISTING_ACCOUNT": "このメールアドレスはすでに登録されています。別のメールを使用するか、サインインしてください。"
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "メールアドレス",
+    "PASSWORD": "パスワード",
+    "FIRST_NAME": "名",
+    "LAST_NAME": "姓",
+    "CONFIRM_PASSWORD": "パスワードの確認"
+  }
+}

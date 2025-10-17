@@ -1,10 +1,23 @@
-<div class="navbar">
-  <mat-toolbar class="toolbar" color="primary">
-  @if(showButtonAtTop) {
-    <ng-container>
-      <button mat-button routerLink="/login" routerLinkActive="active">Sign In</button>
-      <button mat-stroked-button routerLink="/register" routerLinkActive="active">Register</button>
-    </ng-container>
-    }
-  </mat-toolbar>
-</div>
+<mat-toolbar class="toolbar" color="primary">
+
+  <div class="toolbar-left">
+    <div class="language-selector">
+      <select (change)="switchLanguage($event)">
+        <option *ngFor="let lang of supportedLanguages" [value]="lang.code" [selected]="lang.code === currentLang">
+          {{ lang.label }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  @if(!hideAuthButtons) {
+      <div class="toolbar-right">
+        <button mat-button routerLink="/login" routerLinkActive="active">{{'BUTTONS.SIGNIN' | translate}}</button>
+        <button mat-stroked-button routerLink="/register" routerLinkActive="active">{{'BUTTONS.REGISTER' | translate}}</button>
+      </div>
+  }@else {
+    <div class="navbar-user" *ngIf="user">
+      {{'NAVBAR.GREETING' | translate}}, {{ user.firstName }}
+    </div>
+  }
+</mat-toolbar>

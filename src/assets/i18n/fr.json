@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "Restez organisé. Suivez vos tâches. Atteignez vos objectifs.",
+    "DESCRIPTION_HEADER": "À propos de Listelle",
+    "DESCRIPTION_TEXT": "Gérez votre vie professionnelle et personnelle, une tâche à la fois. Créez des to-dos, marquez-les comme terminées et restez maître de vos objectifs quotidiens sans effort !"
+  },
+
+  "LOGIN": {
+    "HEADER": "Se connecter",
+    "WRONG_ACCOUNT": "Vous avez peut-être saisi une adresse e-mail ou un mot de passe incorrect. Veuillez réessayer !",
+    "REGISTER_MESSAGE": "Vous n’avez pas encore de compte ?"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "Créer un compte",
+    "SIGNIN_TEXT": "Vous avez déjà un compte ?"
+  },
+
+  "NAVBAR": {
+    "GREETING": "Bonjour"
+  },
+
+  "PASSWORD": {
+    "TITLE": "Le mot de passe doit inclure :",
+    "MIN_LENGTH": "Au moins 8 caractères",
+    "UPPERCASE": "Une lettre majuscule",
+    "LOWERCASE": "Une lettre minuscule",
+    "NUMBER": "Un chiffre",
+    "SPECIAL_CHAR": "Un caractère spécial"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "Se connecter",
+    "REGISTER": "S’inscrire",
+    "CREATE_ACCOUNT": "Créer un compte",
+    "LEARN_MORE": "En savoir plus"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "L’adresse e-mail est obligatoire",
+    "INVALID_EMAIL": "L’adresse e-mail doit être dans un format valide",
+    "REQUIRED_PASSWORD": "Le mot de passe est obligatoire",
+    "FIRST_NAME": "Le prénom est obligatoire",
+    "LAST_NAME": "Le nom de famille est obligatoire",
+    "PASSWORD_NOT_MATCHING": "Les mots de passe ne correspondent pas !",
+    "EXISTING_ACCOUNT": "Un compte avec cette adresse e-mail existe déjà. Essayez avec une autre adresse ou connectez-vous !"
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "Adresse e-mail",
+    "PASSWORD": "Mot de passe",
+    "FIRST_NAME": "Prénom",
+    "LAST_NAME": "Nom",
+    "CONFIRM_PASSWORD": "Confirmer le mot de passe"
+  }
+}

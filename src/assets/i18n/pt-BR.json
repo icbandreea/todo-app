@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "Mantenha-se organizado. Acompanhe suas tarefas. Conclua suas metas.",
+    "DESCRIPTION_HEADER": "Sobre o Listelle",
+    "DESCRIPTION_TEXT": "Gerencie sua vida profissional e pessoal, uma tarefa por vez. Crie tarefas, marque-as como concluídas e acompanhe seus objetivos diários sem esforço."
+  },
+
+  "LOGIN": {
+    "HEADER": "Entrar",
+    "WRONG_ACCOUNT": "Você pode ter digitado o e-mail ou senha incorretos. Por favor, tente novamente!",
+    "REGISTER_MESSAGE": "Ainda não tem uma conta?"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "Criar uma conta",
+    "SIGNIN_TEXT": "Já tem uma conta?"
+  },
+
+  "NAVBAR": {
+    "GREETING": "Olá"
+  },
+
+  "PASSWORD": {
+    "TITLE": "A senha deve incluir:",
+    "MIN_LENGTH": "Pelo menos 8 caracteres",
+    "UPPERCASE": "Uma letra maiúscula",
+    "LOWERCASE": "Uma letra minúscula",
+    "NUMBER": "Um número",
+    "SPECIAL_CHAR": "Um caractere especial"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "Entrar",
+    "REGISTER": "Registrar",
+    "CREATE_ACCOUNT": "Criar conta",
+    "LEARN_MORE": "Saiba mais"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "O e-mail é obrigatório",
+    "INVALID_EMAIL": "Deve ser um formato de e-mail válido",
+    "REQUIRED_PASSWORD": "A senha é obrigatória",
+    "FIRST_NAME": "O nome é obrigatório",
+    "LAST_NAME": "O sobrenome é obrigatório",
+    "PASSWORD_NOT_MATCHING": "As senhas não correspondem!",
+    "EXISTING_ACCOUNT": "Já existe uma conta com este e-mail. Tente outro ou faça login."
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "Endereço de e-mail",
+    "PASSWORD": "Senha",
+    "FIRST_NAME": "Nome",
+    "LAST_NAME": "Sobrenome",
+    "CONFIRM_PASSWORD": "Confirmar senha"
+  }
+}

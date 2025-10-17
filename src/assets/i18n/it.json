@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "Rimani organizzato. Monitora le tue attività. Raggiungi i tuoi obiettivi.",
+    "DESCRIPTION_HEADER": "Informazioni su Listelle",
+    "DESCRIPTION_TEXT": "Gestisci la tua vita lavorativa e personale, un compito alla volta. Crea to-do, contrassegnali come completati e rimani al passo con i tuoi obiettivi quotidiani senza sforzo!"
+  },
+
+  "LOGIN": {
+    "HEADER": "Accedi",
+    "WRONG_ACCOUNT": "Potresti aver inserito un indirizzo email o una password errati. Riprova!",
+    "REGISTER_MESSAGE": "Non hai ancora un account?"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "Crea un account",
+    "SIGNIN_TEXT": "Hai già un account?"
+  },
+
+  "NAVBAR": {
+    "GREETING": "Ciao"
+  },
+
+  "PASSWORD": {
+    "TITLE": "La password deve includere:",
+    "MIN_LENGTH": "Almeno 8 caratteri",
+    "UPPERCASE": "Una lettera maiuscola",
+    "LOWERCASE": "Una lettera minuscola",
+    "NUMBER": "Un numero",
+    "SPECIAL_CHAR": "Un carattere speciale"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "Accedi",
+    "REGISTER": "Registrati",
+    "CREATE_ACCOUNT": "Crea account",
+    "LEARN_MORE": "Scopri di più"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "L'email è obbligatoria",
+    "INVALID_EMAIL": "Deve essere un formato email valido",
+    "REQUIRED_PASSWORD": "La password è obbligatoria",
+    "FIRST_NAME": "Il nome è obbligatorio",
+    "LAST_NAME": "Il cognome è obbligatorio",
+    "PASSWORD_NOT_MATCHING": "Le password non corrispondono!",
+    "EXISTING_ACCOUNT": "Esiste già un account con questo indirizzo email. Prova con un altro o accedi!"
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "Indirizzo email",
+    "PASSWORD": "Password",
+    "FIRST_NAME": "Nome",
+    "LAST_NAME": "Cognome",
+    "CONFIRM_PASSWORD": "Conferma password"
+  }
+}

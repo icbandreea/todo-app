@@ -1,17 +1,19 @@
+<div class="registerpage">
+<app-navbar></app-navbar>
 <div class="container">
     <form #signInForm="ngForm" class="form" (ngSubmit)="register()">
         <img class="logo" src="/assets/images/logo3.png" routerLink="/home" routerLinkActive="active"/>
-        <div class="register">Crate an account</div>
+        <div class="register">{{'REGISTER.CREATE_ACCOUNT_MESSAGE' | translate}}</div>
         <input
         name="firstName"
         required
         #firstName="ngModel"
         [(ngModel)]="credentials.firstName"
-        placeholder="First Name"
+        [placeholder]="'PLACEHOLDER.FIRST_NAME' | translate"
         type="text"
         />
         @if(firstName.errors?.['required'] && firstName.touched) {
-            <em class="error">{{registerText.FirstNameError}}</em>
+            <em class="error">{{'ERRORS.FIRST_NAME' | translate}}</em>
         }
 
         <input
@@ -19,11 +21,11 @@
         required
         #lastName="ngModel"
         [(ngModel)]="credentials.lastName"
-        placeholder="Last Name"
+        [placeholder]="'PLACEHOLDER.LAST_NAME' | translate"
         type="text"
         />
         @if(lastName.errors?.['required'] && lastName.touched) {
-            <em class="error">{{registerText.LastNameError}}</em>
+            <em class="error">{{'ERRORS.LAST_NAME' | translate}}</em>
         }
 
         <input
@@ -32,14 +34,14 @@
         email
         #email="ngModel"
         [(ngModel)]="credentials.email"
-        placeholder="Email Address"
+        [placeholder]="'PLACEHOLDER.EMAIL' | translate"
         type="text"
         /> 
         @if(email.errors?.['required'] && email.touched) {
-            <em class="error">{{registerText.EmailError}}</em>
+            <em class="error">{{'ERRORS.REQUIRED_EMAIL' | translate}}</em>
         }
         @if(email.errors?.['email'] && email.touched) {
-            <em class="error">{{registerText.InvalidEmailError}}</em>
+            <em class="error">{{'ERROS.INVALID_EMAIL' | translate}}</em>
         }
 
         <input
@@ -49,15 +51,15 @@
         [(ngModel)]="credentials.password"
         appStrongPassword
         (blur)="password.control.updateValueAndValidity()"
-        placeholder="Password"
+        [placeholder]="'PLACEHOLDER.PASSWORD' | translate"
         type="password"
         />
         @if(password.errors?.['required'] && password.touched) {
-            <em class="error">{{registerText.PasswordError}}</em>
+            <em class="error">{{'ERRORS.REQUIRED_PASSWORD' | translate}}</em>
         }
         @if(password.errors?.['strongPassword'] && password.touched) {
             <em class="error">
-                <p>{{passwordRulesTitle}}</p> 
+                <p>{{'PASSWORD.TITLE' | translate}}</p> 
                     @if(password.errors?.['strongPassword']?.length) {
                         <ul>
                             @for(rule of password.errors?.['strongPassword']; track rule) {
@@ -73,18 +75,18 @@
             required
             #confirmPassword="ngModel"
             [(ngModel)]="credentials.confirmPassword"
-            placeholder="Confirm Password"
+            [placeholder]="'PLACEHOLDER.CONFIRM_PASSWORD' | translate"
             type="password"
             />
             @if(confirmPassword.touched && confirmPassword.value !== credentials.password) {
                 <em class="error">
-                    {{registerText.PasswordsNotMatchingError}}
+                    {{'ERRORS.PASSWORD_NOT_MATCHING' | translate}}
                 </em>
             }
             
         <div class="buttons">
         <button type="submit" [disabled]="signInForm.invalid || credentials.password !== credentials.confirmPassword" class="signin">
-            Register
+            {{'BUTTONS.REGISTER' | translate}}
         </button>
         </div>
         @if(registerError) {
@@ -96,12 +98,14 @@
                     <path d="M12.495 7c.279 0 .505.233.505.503v5.994a.497.497 0 0 1-.505.503h-.99a.509.509 0 0 1-.505-.503V7.503c0-.278.214-.503.505-.503h.99zm0 10a.497.497 0 0 0 .505-.505v-.99a.497.497 0 0 0-.505-.505h-.99a.497.497 0 0 0-.505.505v.99c0 .279.214.505.505.505h.99z" class="wd-icon-accent"></path>
                     </g>
                 </svg>
-                {{registerText.ExistingAccountError}}
+                {{'ERRORS.EXISTING_ACCOUNT' | translate}}
             </div>
         }
         <div class="accountMessage">
-            Already have an account? <br><a routerLink="/login" routerLinkActive="active">Sign In</a>
+           {{'REGISTER.SIGNIN_TEXT' | translate}} <br><a routerLink="/login" routerLinkActive="active">{{'BUTTONS.SIGNIN' | translate}}</a>
         </div>
     </form>
 
 </div>
+</div>
+

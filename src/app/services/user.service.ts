@@ -9,9 +9,11 @@ import { IUser, IUserCredentials } from '../models/user.model';
 export class UserService {
 
   private user: BehaviorSubject<IUser | null>;
+   public user$: Observable<IUser | null>;
 
   constructor(private http: HttpClient) {
     this.user = new BehaviorSubject<IUser | null>(null);
+    this.user$ = this.user.asObservable();
    }
 
   signIn(credentials: IUserCredentials): Observable<IUser> {
@@ -25,6 +27,15 @@ export class UserService {
 
   register(user: IUser): Observable<IUser> {
     return this.http
-      .post<IUser>('/api/register', user);
+      .post<IUser>('/api/register', user).pipe(
+        map((newUser: IUser) => {
+          this.user.next(newUser);
+          return newUser;
+        })
+      );
+  }
+
+  get currentUser(): IUser | null {
+    return this.user.value;
   }
 }

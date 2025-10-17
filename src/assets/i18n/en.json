@@ -1,0 +1,56 @@
+{
+    "HOME_PAGE": {
+        "HERO_TEXT" : "Stay organized. Track your tasks. Get things done.",
+        "DESCRIPTION_HEADER" : "About Listelle",
+        "DESCRIPTION_TEXT" : "Manage your work and personal life, one task at a time. Create to-dos, mark them complete and stay on top of your daily goals effortlessly!"
+},
+
+    "LOGIN": {
+        "HEADER": "Sign In",
+        "WRONG_ACCOUNT" : "You may have entered the wrong email address or password. Please try again!",
+        "REGISTER_MESSAGE" : "Don't have an account yet?"
+},
+
+    "REGISTER":  {
+        "CREATE_ACCOUNT_MESSAGE": "Create an account",
+        "SIGNIN_TEXT": "Already have an account?"
+},
+
+    "NAVBAR": {
+        "GREETING": "Hi"
+    },
+
+    "PASSWORD": {
+        "TITLE" : "Password must include:",
+        "MIN_LENGTH" : "At least 8 characters",
+        "UPPERCASE" : "An uppercase letter",
+        "LOWERCASE" : "A lowercase letter",
+        "NUMBER" : "A number",
+        "SPECIAL_CHAR" : "A special character"
+},
+
+    "BUTTONS": {
+        "SIGNIN": "Sign In",
+        "REGISTER": "Register",
+        "CREATE_ACCOUNT": "Create Account",
+        "LEARN_MORE": "Find out more"
+},
+
+    "ERRORS": {
+        "REQUIRED_EMAIL" : "Email is required",
+        "INVALID_EMAIL" : "Must be a valid email format",
+        "REQUIRED_PASSWORD" : "Password is required",
+        "FIRST_NAME" : "First Name is required",
+        "LAST_NAME" : "Last Name is required",
+        "PASSWORD_NOT_MATCHING" : "Passwords do not match!",
+        "EXISTING_ACCOUNT" : "An account with this email address already exists. Try again with another email address or Sign In!"
+    },
+
+    "PLACEHOLDER": {
+        "EMAIL": "Email Address",
+        "PASSWORD": "Password",
+        "FIRST_NAME": "FIrst Name",
+        "LAST_NAME": "Last Name",
+        "CONFIRM_PASSWORD": "Confirm Password"
+    }
+}

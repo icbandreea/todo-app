@@ -6,21 +6,20 @@
     <section class="hero">
         <div class="hero-content">
             <img class="logo" src="/assets/images/logo3.png" />
-            <h3>{{homePageText.HeroText}}</h3>
-            <button id="hero-button" mat-raised-button (click)="scrollToDetails()">Find out more</button>
+            <h3>{{'HOME_PAGE.HERO_TEXT' | translate}}</h3>
+            <button id="hero-button" mat-raised-button (click)="scrollToDetails()">{{'BUTTONS.LEARN_MORE' | translate}}</button>
         </div>
-
     </section>
 
     <section #details class="details">
         <div class="details-description">
-            <h2>{{homePageText.DescriptionHeader}}</h2>
-            <p>{{homePageText.DescriptionText}}</p>
+            <h2>{{'HOME_PAGE.DESCRIPTION_HEADER' | translate}}</h2>
+            <p>{{'HOME_PAGE.DESCRIPTION_TEXT' | translate}}</p>
         </div>
         @if(!showButtonAtTop) {
             <div class="details-buttons">
-                <button id="details-signin" mat-raised-button color="primary" routerLink="/login">Sign In</button>
-                <button id="details-register" mat-stroked-button color="primary" routerLink="/register">Register</button>
+                <button id="details-signin" mat-raised-button color="primary" routerLink="/login">{{'BUTTONS.SIGNIN' | translate}}</button>
+                <button id="details-register" mat-stroked-button color="primary" routerLink="/register">{{'BUTTONS.REGISTER' | translate}}</button>
             </div>
         }
 

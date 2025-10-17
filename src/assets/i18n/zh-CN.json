@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "保持有序。跟踪您的任务。完成目标。",
+    "DESCRIPTION_HEADER": "关于 Listelle",
+    "DESCRIPTION_TEXT": "管理您的工作和个人生活，一次处理一项任务。创建待办事项，将其标记为完成，并轻松掌控您的每日目标。"
+  },
+
+  "LOGIN": {
+    "HEADER": "登录",
+    "WRONG_ACCOUNT": "您可能输入了错误的电子邮件地址或密码。请重试！",
+    "REGISTER_MESSAGE": "还没有账户？"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "创建账户",
+    "SIGNIN_TEXT": "已经有账户？"
+  },
+
+  "NAVBAR": {
+    "GREETING": "你好"
+  },
+
+  "PASSWORD": {
+    "TITLE": "密码必须包含：",
+    "MIN_LENGTH": "至少8个字符",
+    "UPPERCASE": "一个大写字母",
+    "LOWERCASE": "一个小写字母",
+    "NUMBER": "一个数字",
+    "SPECIAL_CHAR": "一个特殊字符"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "登录",
+    "REGISTER": "注册",
+    "CREATE_ACCOUNT": "创建账户",
+    "LEARN_MORE": "了解更多"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "电子邮件为必填项",
+    "INVALID_EMAIL": "必须为有效的电子邮件格式",
+    "REQUIRED_PASSWORD": "密码为必填项",
+    "FIRST_NAME": "名字为必填项",
+    "LAST_NAME": "姓氏为必填项",
+    "PASSWORD_NOT_MATCHING": "密码不匹配！",
+    "EXISTING_ACCOUNT": "此电子邮件已注册。请使用其他电子邮件或登录。"
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "电子邮件地址",
+    "PASSWORD": "密码",
+    "FIRST_NAME": "名字",
+    "LAST_NAME": "姓氏",
+    "CONFIRM_PASSWORD": "确认密码"
+  }
+}

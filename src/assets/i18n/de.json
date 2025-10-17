@@ -1,0 +1,56 @@
+{
+  "HOME_PAGE": {
+    "HERO_TEXT": "Bleiben Sie organisiert. Verfolgen Sie Ihre Aufgaben. Erledigen Sie Dinge.",
+    "DESCRIPTION_HEADER": "Über Listelle",
+    "DESCRIPTION_TEXT": "Verwalten Sie Ihr Arbeits- und Privatleben, eine Aufgabe nach der anderen. Erstellen Sie To-dos, markieren Sie sie als erledigt und behalten Sie Ihre täglichen Ziele mühelos im Blick."
+  },
+
+  "LOGIN": {
+    "HEADER": "Anmelden",
+    "WRONG_ACCOUNT": "Sie haben möglicherweise die falsche E-Mail-Adresse oder das falsche Passwort eingegeben. Bitte versuchen Sie es erneut!",
+    "REGISTER_MESSAGE": "Sie haben noch kein Konto?"
+  },
+
+  "REGISTER": {
+    "CREATE_ACCOUNT_MESSAGE": "Konto erstellen",
+    "SIGNIN_TEXT": "Haben Sie bereits ein Konto?"
+  },
+
+  "NAVBAR": {
+    "GREETING": "Hallo"
+  },
+
+  "PASSWORD": {
+    "TITLE": "Das Passwort muss Folgendes enthalten:",
+    "MIN_LENGTH": "Mindestens 8 Zeichen",
+    "UPPERCASE": "Ein Großbuchstabe",
+    "LOWERCASE": "Ein Kleinbuchstabe",
+    "NUMBER": "Eine Zahl",
+    "SPECIAL_CHAR": "Ein Sonderzeichen"
+  },
+
+  "BUTTONS": {
+    "SIGNIN": "Anmelden",
+    "REGISTER": "Registrieren",
+    "CREATE_ACCOUNT": "Konto erstellen",
+    "LEARN_MORE": "Mehr erfahren"
+  },
+
+  "ERRORS": {
+    "REQUIRED_EMAIL": "E-Mail ist erforderlich",
+    "INVALID_EMAIL": "Muss ein gültiges E-Mail-Format haben",
+    "REQUIRED_PASSWORD": "Passwort ist erforderlich",
+    "FIRST_NAME": "Vorname ist erforderlich",
+    "LAST_NAME": "Nachname ist erforderlich",
+    "PASSWORD_NOT_MATCHING": "Passwörter stimmen nicht überein!",
+    "EXISTING_ACCOUNT": "Ein Konto mit dieser E-Mail-Adresse existiert bereits. Versuchen Sie eine andere E-Mail oder melden Sie sich an."
+  },
+
+  "PLACEHOLDER": {
+    "EMAIL": "E-Mail-Adresse",
+    "PASSWORD": "Passwort",
+    "FIRST_NAME": "Vorname",
+    "LAST_NAME": "Nachname",
+    "CONFIRM_PASSWORD": "Passwort bestätigen"
+  }
+}
