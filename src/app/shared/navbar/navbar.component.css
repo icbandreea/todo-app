@@ -76,3 +76,7 @@ button + button {
   color: #444; 
   margin-right: 15px;
 }
+
+.logout-button{
+  color: #fff !important;
+}

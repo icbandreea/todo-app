@@ -33,7 +33,8 @@
     "SIGNIN": "サインイン",
     "REGISTER": "登録",
     "CREATE_ACCOUNT": "アカウント作成",
-    "LEARN_MORE": "詳細はこちら"
+    "LEARN_MORE": "詳細はこちら",
+    "LOGOUT": "ログアウト"
   },
 
   "ERRORS": {

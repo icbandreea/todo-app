@@ -35,6 +35,12 @@ export class UserService {
       );
   }
 
+    logout() {
+    this.user.next(null);
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+  }
+
   get currentUser(): IUser | null {
     return this.user.value;
   }

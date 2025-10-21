@@ -1,5 +1,43 @@
 
 <div class="dashboard">
     <app-navbar></app-navbar>
+    <div class="container">
+        <div class="top">
+            <p>Quick Filters</p>
+            <p>Filter</p>
+        </div>
+        <div class="middle">
+            <div class="to-do">
+                <p>To Do</p>
+                @for(task of toDoTasks; track task.id) {
+                    <div class="task-card">
+                        {{task.title}}
+                    </div>
+                }
+                
+            </div>
+            <div class="in-progress">
+                <p>In Progress</p>
+                @for(task of inProgressTasks; track task.id) {
+                    <div class="task-card">
+                        {{task.title}}
+                    </div>
+                }
+            </div>
+            <div class="done">
+                <p>Done</p>
+                @for(task of doneTasks; track task.id) {
+                    <div class="task-card">
+                        {{task.title}}
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Edit Board</p>
+            <p>+ Add Task</p>
+        </div>
+
+    </div>
 
 </div>

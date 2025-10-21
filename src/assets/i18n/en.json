@@ -33,7 +33,8 @@
         "SIGNIN": "Sign In",
         "REGISTER": "Register",
         "CREATE_ACCOUNT": "Create Account",
-        "LEARN_MORE": "Find out more"
+        "LEARN_MORE": "Find out more",
+        "LOGOUT": "Log Out"
 },
 
     "ERRORS": {

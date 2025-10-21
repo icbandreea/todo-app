@@ -33,7 +33,8 @@
     "SIGNIN": "Iniciar sesión",
     "REGISTER": "Registrarse",
     "CREATE_ACCOUNT": "Crear cuenta",
-    "LEARN_MORE": "Más información"
+    "LEARN_MORE": "Más información",
+    "LOGOUT": "Cerrar sesión"
   },
 
   "ERRORS": {

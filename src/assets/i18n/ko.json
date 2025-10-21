@@ -33,7 +33,8 @@
     "SIGNIN": "로그인",
     "REGISTER": "가입",
     "CREATE_ACCOUNT": "계정 생성",
-    "LEARN_MORE": "자세히 알아보기"
+    "LEARN_MORE": "자세히 알아보기",
+    "LOGOUT": "로그아웃"
   },
 
   "ERRORS": {

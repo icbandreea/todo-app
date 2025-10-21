@@ -17,7 +17,21 @@
       </div>
   }@else {
     <div class="navbar-user" *ngIf="user">
-      {{'NAVBAR.GREETING' | translate}}, {{ user.firstName }}
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        {{ 'NAVBAR.GREETING' | translate }}, {{ user.firstName }}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #userMenu="matMenu">
+      <!-- <button mat-menu-item routerLink="/profile">
+        <mat-icon>person</mat-icon>
+        {{ 'NAVBAR.PROFILE' | translate }}
+      </button> -->
+      <button mat-menu-item class="logout-button" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        {{ 'BUTTONS.LOGOUT' | translate }}
+      </button>
+    </mat-menu>
     </div>
   }
 </mat-toolbar>

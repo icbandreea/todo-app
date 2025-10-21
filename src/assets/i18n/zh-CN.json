@@ -33,7 +33,8 @@
     "SIGNIN": "登录",
     "REGISTER": "注册",
     "CREATE_ACCOUNT": "创建账户",
-    "LEARN_MORE": "了解更多"
+    "LEARN_MORE": "了解更多",
+    "LOGOUT": "退出登录"
   },
 
   "ERRORS": {

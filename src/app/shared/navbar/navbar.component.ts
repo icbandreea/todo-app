@@ -65,4 +65,14 @@ export class NavbarComponent implements OnInit {
       localStorage.setItem('appLang', lang);
     }
 
+    logout() {
+      this.userService.logout();
+
+      this.user = null;
+      this.hideAuthButtons = false;
+
+      this.router.navigate(['/home']);
+}
+
+
 }
