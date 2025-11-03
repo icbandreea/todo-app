@@ -9,29 +9,71 @@
         <div class="middle">
             <div class="to-do">
                 <p>To Do</p>
+                <div
+                cdkDropList
+                [cdkDropListData]="toDoTasks"
+                [cdkDropListConnectedTo]="[inProgressDropList, doneDropList]"
+                (cdkDropListDropped)="drop($event, 'to-do')"
+                #toDoDropList = "cdkDropList"
+                >
                 @for(task of toDoTasks; track task.id) {
-                    <div class="task-card">
-                        {{task.title}}
+                    <div class="task-card" cdkDrag>
+                        <p class="task-title">{{ task.title }}</p>
+                        <p class="task-due">Due: {{ task.dueDate | date:'shortDate' }}</p>
+                        <p class="task-status">Status: {{ task.status | titlecase }}</p>
+                        <p class="task-priority">Priority: {{ task.priority | titlecase}}</p>
+
                     </div>
+                } @empty {
+                    <p class="empty-message">No tasks yet!</p>
                 }
-                
+                </div>
             </div>
+
             <div class="in-progress">
                 <p>In Progress</p>
+                <div
+                cdkDropList
+                [cdkDropListData]="inProgressTasks"
+                [cdkDropListConnectedTo]="[toDoDropList, doneDropList]"
+                (cdkDropListDropped)="drop($event, 'in-progress')"
+                #inProgressDropList = "cdkDropList"
+                >
                 @for(task of inProgressTasks; track task.id) {
-                    <div class="task-card">
-                        {{task.title}}
+                    <div class="task-card" cdkDrag>
+                        <p class="task-title">{{ task.title }}</p>
+                        <p class="task-due">Due: {{ task.dueDate | date:'shortDate' }}</p>
+                        <p class="task-status">Status: {{ task.status | titlecase }}</p>
+                        <p class="task-priority">Priority: {{ task.priority | titlecase}}</p>
                     </div>
+                } @empty {
+                    <p class="empty-message">No tasks yet!</p>
                 }
+                </div>
             </div>
+
             <div class="done">
                 <p>Done</p>
+                <div
+                cdkDropList
+                [cdkDropListData]="doneTasks"
+                [cdkDropListConnectedTo]="[toDoDropList, inProgressDropList]"
+                (cdkDropListDropped)="drop($event, 'done')"
+                #doneDropList = "cdkDropList"
+                >
                 @for(task of doneTasks; track task.id) {
-                    <div class="task-card">
-                        {{task.title}}
+                    <div class="task-card" cdkDrag>
+                        <p class="task-title">{{ task.title }}</p>
+                        <p class="task-due">Due: {{ task.dueDate | date:'shortDate' }}</p>
+                        <p class="task-status">Status: {{ task.status | titlecase }}</p>
+                        <p class="task-priority">Priority: {{ task.priority | titlecase}}</p>
                     </div>
+                } @empty {
+                    <p class="empty-message">No tasks yet!</p>
                 }
+                </div>
             </div>
+
         </div>
         <div class="bottom">
             <p>Edit Board</p>
@@ -39,5 +81,7 @@
         </div>
 
     </div>
+
+    
 
 </div>

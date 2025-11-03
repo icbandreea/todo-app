@@ -44,7 +44,7 @@
     "FIRST_NAME": "Il nome è obbligatorio",
     "LAST_NAME": "Il cognome è obbligatorio",
     "PASSWORD_NOT_MATCHING": "Le password non corrispondono!",
-    "EXISTING_ACCOUNT": "Esiste già un account con questo indirizzo email. Prova con un altro o accedi!"
+    "EXISTING_ACCOUNT": "Esiste già un account con questo indirizzo email! Prova con un altro o accedi."
   },
 
   "PLACEHOLDER": {

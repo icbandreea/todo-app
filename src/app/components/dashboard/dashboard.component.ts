@@ -1,5 +1,6 @@
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
-import { Task } from 'src/app/models/task.model';
+import { Task, TaskStatus } from 'src/app/models/task.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,10 @@ import { Task } from 'src/app/models/task.model';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  selectedTask?: Task;
+  taskPosition = {top: 0, left: 0};
+  showTaskDetails = false;
+
   tasks: Task[] = [
     {
       id: 1,
@@ -54,4 +59,20 @@ export class DashboardComponent {
   get doneTasks() {
     return this.tasks.filter(t => t.status === 'done');
   }
+
+  drop(event: CdkDragDrop<Task[]>, newStatus: TaskStatus) {
+    if(event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      const task = event.previousContainer.data[event.previousIndex];
+      task.status = newStatus;
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
+  }
+
 }

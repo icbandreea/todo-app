@@ -44,7 +44,7 @@
     "FIRST_NAME": "이름은 필수입니다",
     "LAST_NAME": "성은 필수입니다",
     "PASSWORD_NOT_MATCHING": "비밀번호가 일치하지 않습니다!",
-    "EXISTING_ACCOUNT": "이 이메일로 이미 계정이 존재합니다. 다른 이메일을 사용하거나 로그인하세요!"
+    "EXISTING_ACCOUNT": "이 이메일로 이미 계정이 존재합니다! 다른 이메일을 사용하거나 로그인하세요."
   },
 
   "PLACEHOLDER": {

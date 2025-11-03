@@ -26,6 +26,9 @@ app-navbar {
   padding: 0 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
 }
 
 .middle {
@@ -49,6 +52,42 @@ app-navbar {
   margin-bottom: 10px;
 }
 
+.task-card {
+  background-color: #fff9e6; 
+  border-left: 5px solid #F5D72A;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  cursor: grab;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.task-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.task-due, .task-status, .task-priority {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.empty-message {
+  font-style: italic;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .bottom {
   flex: 0 0 20%;
   display: flex;
@@ -58,6 +97,42 @@ app-navbar {
   padding: 0 20px;
   border-radius: 8px;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.bottom p:last-child {
+  color: #fff;
+  background-color: #F5D72A;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.bottom p:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.middle > div[cdkDropList] {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 5px; /* scrollbar spacing */
+}
+
+
+.middle > div[cdkDropList]::-webkit-scrollbar {
+  width: 6px;
+}
+
+.middle > div[cdkDropList]::-webkit-scrollbar-thumb {
+  background-color: #F5D72A;
+  border-radius: 3px;
+}
+
+.middle > div[cdkDropList]::-webkit-scrollbar-track {
+  background-color: #f8f9fa;
 }
 
 p {

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +13,7 @@ import { StrongPasswordDirective } from './directives';
 
 import {TranslateModule} from '@ngx-translate/core';
 import {provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -33,10 +31,8 @@ import {provideTranslateHttpLoader } from '@ngx-translate/http-loader';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
+    MaterialModule,
+    DragDropModule,
     TranslateModule.forRoot({
       loader: provideTranslateHttpLoader({
         prefix: './assets/i18n/',

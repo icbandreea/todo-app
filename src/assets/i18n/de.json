@@ -44,7 +44,7 @@
     "FIRST_NAME": "Vorname ist erforderlich",
     "LAST_NAME": "Nachname ist erforderlich",
     "PASSWORD_NOT_MATCHING": "Passwörter stimmen nicht überein!",
-    "EXISTING_ACCOUNT": "Ein Konto mit dieser E-Mail-Adresse existiert bereits. Versuchen Sie eine andere E-Mail oder melden Sie sich an."
+    "EXISTING_ACCOUNT": "Ein Konto mit dieser E-Mail-Adresse existiert bereits! Versuchen Sie eine andere E-Mail oder melden Sie sich an."
   },
 
   "PLACEHOLDER": {

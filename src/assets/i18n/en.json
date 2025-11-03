@@ -44,7 +44,7 @@
         "FIRST_NAME" : "First Name is required",
         "LAST_NAME" : "Last Name is required",
         "PASSWORD_NOT_MATCHING" : "Passwords do not match!",
-        "EXISTING_ACCOUNT" : "An account with this email address already exists. Try again with another email address or Sign In!"
+        "EXISTING_ACCOUNT" : "An account with this email address already exists! Try again with another email address or Sign In."
     },
 
     "PLACEHOLDER": {
